@@ -1,9 +1,9 @@
-FROM golang:alpine
+FROM ubuntu:20.04
 
 COPY ./docker-entrypoint.sh /bin/
 
 RUN chmod a+x /bin/docker-entrypoint.sh \
-    && apk add git build-base
+    && apt update && apt install -y wget git
 
 ENTRYPOINT ["/bin/docker-entrypoint.sh"]
 
