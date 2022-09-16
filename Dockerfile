@@ -1,4 +1,4 @@
-FROM ubuntu:20.04
+FROM go:1.19
 
 COPY ./docker-entrypoint.sh /bin/
 
