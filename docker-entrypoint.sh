@@ -17,7 +17,7 @@ fi
 if [ ! -d $CODE_DIR/.git ]; then
   echo "xdd-plus 核心代码目录为空, 开始clone代码..."
   git clone $REPO_URL  $CODE_DIR
-  wget -P $CODE_DIR/qbot https://github.com/764763903a/xdd-plus/releases/download/v1.7/config.yml
+  wget -O $CODE_DIR/qbot/config.yml https://github.com/764763903a/xdd-plus/releases/download/v1.7/config.yml
 else 
   echo "xdd-plus 核心代码已存在"
   echo "更新 xdd-plus 核心代码"
