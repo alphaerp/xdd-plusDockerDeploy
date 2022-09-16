@@ -1,4 +1,4 @@
-FROM go:1.19
+FROM golang:1.19
 
 COPY ./docker-entrypoint.sh /bin/
 
