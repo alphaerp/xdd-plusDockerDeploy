@@ -2,6 +2,13 @@
 
 CODE_DIR=/xdd-plus
 
+if [  "$ENABLE_GOPROXY" = "true" ]; then
+  export GOPROXY=https://goproxy.io,direct 
+  echo "启用 goproxy 加速 ${GOPROXY}"
+else
+  echo "未启用 goproxy 加速"
+fi
+
 if [ "$ENABLE_GITHUBPROXY" = "true" ]; then
    GITHUBPROXY=https://ghproxy.com/
    echo "启用 github 加速 ${GITHUBPROXY}"
